@@ -25,7 +25,7 @@ GTKWAVE=gtkwave
 # Actual make targets.
 
 .PHONY: verilate
-verilate: check-verilator $(SIMOUTDIR)/simple.o
+verilate: $(SIMOUTDIR)/simple.o
 
 $(SIMOUTDIR)/%.o: $(SIMDIR)/%.cpp $(SRC)/%.sv
 	$(E) "	VERILATE	" $*
